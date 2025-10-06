@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>FORM</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="style.css">
+        <link rel="icon" href="favicon-32x320001.png">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    </head>
+    <body>
+        <section class="form">
+            <div class="stepskipped" style="display: none;">
+                <div class="advrt">
+                    <p>You have not completed this step. Complete it please!</p>
+                    <button class="ok" id="ok">OK</button>
+                </div>
+            </div>
+            <div class="sidebar">
+                <div class="step">
+                    <div class="number clicknumber" id="one">
+                        <p>1</p>
+                    </div>
+                    <div class="content">
+                        <p style="color: rgb(209, 209, 209); font-size:10px ; margin-bottom: 0px;">STEP 1</p>
+                        <p style="color: white; font-size: 12px; margin-top: 3px; font-weight: 600; letter-spacing: 1.5px;">YOUR INFO</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="number" id="two">
+                        <p>2</p>
+                    </div>
+                    <div class="content">
+                        <p style="color: rgb(209, 209, 209); font-size:10px ; margin-bottom: 0px;">STEP 2</p>
+                        <p style="color: white; font-size: 12px; margin-top: 3px; font-weight: 600; letter-spacing: 1.5px;">SELECT PLAN</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="number" id="three">
+                        <p>3</p>
+                    </div>
+                    <div class="content">
+                        <p style="color: rgb(209, 209, 209); font-size:12px ; margin-bottom: 0px;">STEP 3</p>
+                        <p style="color: white; font-size: 12px; margin-top: 3px; font-weight: 600; letter-spacing: 1.5px;">ADD-ONS</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="number" id="four">
+                        <p>4</p>
+                    </div>
+                    <div class="content">
+                        <p style="color: rgb(209, 209, 209); font-size:10px ; margin-bottom: 0px;">STEP 4</p>
+                        <p style="color: white; font-size: 12px; margin-top: 3px; font-weight: 600; letter-spacing: 1.5px;">SUMMARY</p>
+                    </div>
+                </div>
+            </div>
+            <div class="configuration">
+               
+                <div class="entete">
+                    <h1 style="color: hsl(213, 96%, 18%); font-size: 28px; font-weight: 800; margin-bottom: 10px; text-wrap: nowrap;">Personal info</h1>
+                    <p style="color: hsl(231, 11%, 63%); font-size: 14px; margin-top: 0px;">Please provide your name, email address, and phone number.</p>
+                </div>
+                <form class="formm">
+                    <div class="info">
+                        <label  for="name" style="color: hsl(213, 96%, 18%); font-size: 13px;">Name</label>
+                        <input name="name" id="name" type="text" placeholder="e.g. Stephen King">
+                    </div>
+                    <div class="info">
+                        <label  for="email" style="color: hsl(213, 96%, 18%); font-size: 13px; text-wrap: nowrap;">Email Address</label>
+                        <input name="email" id="email" type="email" required placeholder="e.g. Stephenking@lorem.com" pattern="^[a-z]{20}@[a-z]{5}\.[a-z]{2,3}$">
+                    </div>
+                    <div class="info">
+                        <label  for="ph" style="color: hsl(213, 96%, 18%); font-size: 13px; text-wrap: nowrap;">Phone Number <span class="span">This field is required</span></label>
+                        <input style="border-color: red;" name="ph" id="ph" type="tel" placeholder="e.g. +1 234 567 890">
+                    </div>
+                </form>
+                <div class="choice" >
+                <div class="choices">
+                    <div class="choix" id="ch1">
+                    <img src="icon-arcade.svg">
+                    <p style="color: hsl(213, 96%, 18%); font-size: 14px; font-weight: bolder; margin-bottom: 0px; margin-top: 0px;" class="takwa">Arcade</p>
+                    <p class="months">$9/mo</p>
+                    <p class="mnt hidden">2 months free</p>
+                </div>
+                <div class="choix" id="ch2">
+                    <img src="icon-advanced.svg">
+                    <p style="color: hsl(213, 96%, 18%); font-size: 14px; font-weight: bolder; margin-bottom: 0px; margin-top: 0px;" class="takwa">Advanced</p>
+                    <p class="months">$12/mo</p>
+                    <p class="mnt hidden">2 months free</p>
+                </div>
+                <div class="choix" id="ch3">
+                    <img src="icon-pro.svg">
+                    <p style="color: hsl(213, 96%, 18%); font-size: 14px; font-weight: bolder; margin-bottom: 0px; margin-top: 0px;" class="takwa">Pro</p>
+                    <p class="months">$15/mo</p>
+                    <p class="mnt hidden">2 months free</p>
+                </div>
+                </div>
+                <div class="period">
+                    <p style="font-size: smaller; font-weight: bolder;" class="selected" >Monthly</p>
+                    <div class="slide">
+                        <p class="pone">●</p>
+                    </div>
+                    <p style="font-size: smaller; font-weight: bolder;" class="notselected">Yearly</p>
+                </div>
+                </div>
+                <div class="add" >
+                    <div class="option">
+                        <input type="checkbox" id="online" name="online" value="online service" style="height: 17px; width: 17px; margin-top: 10px;">
+                        <div class="explanation">
+                            <label for="online" class="label">Online service</label>
+                            <p style="color: hsl(231, 11%, 63%); font-size: 12px; margin-top: 5px;">Access to multiplayer games</p>
+                        </div>
+                        <p class="price">+$1/mo</p>
+                    </div>
+                    <div class="option">
+                        <input type="checkbox" id="storage" name="storage" value="larger storage" style="height: 17px; width: 17px; margin-top: 10px;">
+                        <div class="explanation">
+                            <label for="storage" class="label">Larger storage</label>
+                            <p style="color: hsl(231, 11%, 63%); font-size: 12px; margin-top: 5px;">Extra 1TB of cloud save</p>
+                        </div>
+                        <p class="price">+$2/mo</p>
+                    </div>
+                    <div class="option">
+                        <input type="checkbox" id="profile" name="profile" value="Customizable profile" style="height: 17px; width: 17px; margin-top: 10px;">
+                        <div class="explanation">
+                            <label for="profile" class="label">Customizable profile</label>
+                            <p style="color: hsl(231, 11%, 63%); font-size: 12px; margin-top: 5px;">Custom theme on your profile</p>
+                        </div>
+                        <p class="price">+$2/mo</p>
+                    </div>
+                </div>
+                <div class="finish" >
+                                        <div class="plann">
+                                                <div class="mon plan-row">
+                                                    <div class="opt">
+                                                        <div style="display: flex; flex-direction: row; gap: 5px;"><p id="plan">Arcade</p><p id="prd">(Monthly)</p></div>
+                                                        <p class="chang" style="text-decoration: underline; cursor: pointer;">Change</p>
+                                                    </div>
+                                                    <p id="prc">$9/mo</p>
+                                                </div>
+                                        </div>
+                    <div class="total">
+                        <div style="display: flex; flex-direction: row; gap: 5px;"><p class="change">Total (per </p><p class="change" id="pr">month)</p></div> 
+                        <p id="tot">+$12/mo</p>
+                    </div>
+                </div>
+                <div class="thank">
+                    <img src="icon-thank-you.svg">
+                    <h1 style="color: hsl(213, 96%, 18%);">Thank you!</h1>
+                    <p style="text-align: center; color: hsl(231, 11%, 63%); font-size: 14px; margin-top: 0px;">Thanks for confirming your subscription! We hope you have fun using our platform. If you ever need support, please feel free to email us at support@loremgaming.com.</p>
+                </div>
+                <button type="button" class="next" >Next Step</button>
+                <button type="button" class="confirm" >Confirm</button>
+                <button type="button" class="back" >Go Back</button>
+            </div>
+        </section>
+        <script>
+        const elements = {
+    steps: ['one', 'two', 'three', 'four'].map(id => document.getElementById(id)),
+    entete: document.querySelector('.entete'),
+    form: document.querySelector('.formm'),
+    choice: document.querySelector('.choice'),
+    add: document.querySelector('.add'),
+    finish: document.querySelector('.finish'),
+    thank: document.querySelector('.thank'),
+    confir: document.querySelector('.confirm'),
+    next: document.querySelector('.next'),
+    back: document.querySelector('.back'),
+    p: document.querySelector('.entete p'),
+    choix: document.querySelectorAll('.choix'),
+    slide: document.querySelector('.slide'),
+    pone: document.querySelector('.pone'),
+    month: document.querySelector('.selected'),
+    year: document.querySelector('.notselected'),
+    months: document.querySelectorAll('.mnt'),
+    ok: document.getElementById('ok'),
+    stepskipped: document.querySelector('.stepskipped'),
+    plan: document.getElementById('plan'),
+    prd: document.getElementById('prd'),
+    prc: document.getElementById('prc'),
+    pr: document.getElementById('pr'),
+    m: document.querySelectorAll('.months'),
+    price: document.querySelectorAll('.price'),
+    third: document.querySelectorAll('.option'),
+    tot: document.getElementById('tot'),
+    chang: document.querySelector('.chang')
+};
+
+const content = {
+    titles: ['Personal info', 'Select your plan', 'Pick add-ons', 'Finishing up'],
+    descriptions: [
+        'Please provide your name, email address, and phone number.',
+        'You have the option of monthly or yearly billing.',
+        'Add-ons help enhance your gaming experience.',
+        'Double-check everything looks OK before confirming.'
+    ]
+};
+
+const plans = ['Arcade', 'Advanced', 'Pro'];
+const monthlyPrices = ['$9/mo', '$12/mo', '$15/mo'];
+const yearlyPrices = ['$90/yr', '$120/yr', '$150/yr'];
+const addonPrices = {
+    monthly: ['+$1/mo', '+$2/mo', '+$2/mo'],
+    yearly: ['+$10/yr', '+$20/yr', '+$20/yr']
+};
+
+const addonKeys = ['online', 'storage', 'profile'];
+
+let selectedPlanIndex = -1;
+let selectedAddons = [false, false, false];
+
+function verifStep(step) {
+    const validations = {
+        1: () => Array.from(elements.form.querySelectorAll('input')).every(inp => inp.value.trim() !== ''),
+        2: () => Array.from(elements.choix).some(ch => ch.classList.contains('select')),
+        
+        3: () => selectedAddons.some(v => v === true)
+    };
+    return validations[step] ? validations[step]() : true;
+}
+
+function navigateTo(step) {
+    console.debug('[navigateTo] target=', step, 'selectedPlanIndex=', selectedPlanIndex, 'selectedAddons=', selectedAddons);
+    
+    for (let s = 1; s <= step - 1; s++) {
+        if (!verifStep(s)) {
+            console.debug('[navigateTo] validation failed for step', s);
+            
+            elements.stepskipped.style.display = 'flex';
+            return;
+        }
+    }
+    elements.stepskipped.style.display = 'none';
+    
+    elements.steps.forEach((el, index) => 
+        el.classList.toggle('clicknumber', index === step - 1));
+    
+    if (step <= 4) {
+        elements.entete.querySelector('h1').textContent = content.titles[step - 1];
+        elements.p.textContent = content.descriptions[step - 1];
+    }
+    
+    const visibility = {
+        form: step === 1,
+        choice: step === 2,
+        add: step === 3,
+        finish: step === 4,
+        thank: step === 5,
+        next: step < 4,
+        confir: step === 4,
+        back: step > 1 && step < 5,
+        entete: step < 5
+    };
+    
+    Object.keys(visibility).forEach(key => {
+        if (elements[key]) {
+            elements[key].classList.toggle('hidden', !visibility[key]);
+        }
+    });
+    
+    if (step === 4) {
+        updateSummary();
+    }
+}
+
+function setupPlanSelection() {
+    elements.choix.forEach((choix, index) => {
+        choix.addEventListener('click', () => {
+            elements.choix.forEach(ch => ch.classList.remove('select'));
+            choix.classList.add('select');
+            
+            selectedPlanIndex = index;
+            elements.plan.textContent = plans[index];
+            
+            const isYearly = elements.pone.classList.contains('ptwo');
+            const price = isYearly ? yearlyPrices[index] : monthlyPrices[index];
+            elements.prc.textContent = price;
+            
+            if (!elements.finish.classList.contains('hidden')) {
+                renderSummary();
+            }
+        });
+    });
+}
+
+function setupBillingToggle() {
+    elements.slide.addEventListener('click', () => {
+        const isYearly = elements.pone.classList.toggle('ptwo');
+        console.debug('[billing] toggled isYearly=', isYearly);
+        
+        elements.year.style.color = isYearly ? 'hsl(213, 96%, 18%)' : 'hsl(231, 11%, 63%)';
+        elements.month.style.color = isYearly ? 'hsl(231, 11%, 63%)' : 'hsl(213, 96%, 18%)';
+        
+        elements.months.forEach(el => el.classList.toggle('hidden', !isYearly));
+        
+        const prices = isYearly ? yearlyPrices : monthlyPrices;
+        const addon = isYearly ? addonPrices.yearly : addonPrices.monthly;
+        
+        elements.m.forEach((mm, i) => mm.textContent = prices[i]);
+        elements.price.forEach((pr, i) => pr.textContent = addon[i]);
+        
+        elements.prd.textContent = isYearly ? '(Yearly)' : '(Monthly)';
+        elements.pr.textContent = isYearly ? 'year)' : 'month)';
+        
+        if (selectedPlanIndex !== -1) {
+            const selectedPrice = isYearly ? yearlyPrices[selectedPlanIndex] : monthlyPrices[selectedPlanIndex];
+            elements.prc.textContent = selectedPrice;
+        }
+        
+        
+        console.debug('[billing] updating summary for billing change');
+        renderSummary();
+    });
+}
+
+function updateAddonsVisualDisplay() {
+    
+}
+
+function parsePriceToNumber(text) {
+    
+    if (!text) return 0;
+    const match = text.replace(/[^0-9]/g, '');
+    return match ? parseInt(match, 10) : 0;
+}
+
+function renderSummary() {
+    const isYearly = elements.pone.classList.contains('ptwo');
+    const addonPricesCurrent = isYearly ? addonPrices.yearly : addonPrices.monthly;
+    const planPricesCurrent = isYearly ? yearlyPrices : monthlyPrices;
+
+    const plann = elements.finish.querySelector('.plann');
+    if (!plann) return;
+
+    
+    Array.from(plann.querySelectorAll('.money')).forEach(el => el.remove());
+
+    
+    const planName = selectedPlanIndex !== -1 ? plans[selectedPlanIndex] : elements.plan.textContent;
+    const planPriceText = selectedPlanIndex !== -1 ? planPricesCurrent[selectedPlanIndex] : elements.prc.textContent;
+
+    // Update the visible plan info
+    elements.plan.textContent = planName;
+    elements.prc.textContent = planPriceText;
+    elements.prd.textContent = isYearly ? '(Yearly)' : '(Monthly)';
+    elements.pr.textContent = isYearly ? 'year)' : 'month)';
+
+    // Recreate addon rows based on selectedAddons
+    addonKeys.forEach((key, i) => {
+        if (selectedAddons[i]) {
+            const serviceLabel = document.querySelector(`input[name="${key}"]`)?.value || key;
+            const price = addonPricesCurrent[i];
+            const elt = document.createElement('div');
+            elt.className = 'money';
+            elt.dataset.addon = key;
+            elt.innerHTML = `<p class="change">${serviceLabel}</p><p class="cost">${price}</p>`;
+            plann.appendChild(elt);
+        }
+    });
+
+    // Update total
+    elements.tot.textContent = calculateTotal();
+}
+
+function updateSummary() {
+    renderSummary();
+}
+
+function setupAddons() {
+    elements.third.forEach((t, index) => {
+        t.querySelector('input').addEventListener('change', (e) => {
+            const isChecked = e.target.checked;
+            console.debug('[addon] change index=', index, 'isChecked=', isChecked);
+            selectedAddons[index] = isChecked;
+            t.classList.toggle('select', isChecked);
+            
+            const service = t.querySelector('input').value;
+            const addonKey = addonKeys[index];
+            const isYearly = elements.pone.classList.contains('ptwo');
+            const price = isYearly ? addonPrices.yearly[index] : addonPrices.monthly[index];
+            
+            const existing = Array.from(elements.finish.querySelectorAll('.money'))
+                .find(el => el.dataset && el.dataset.addon === addonKey);
+            
+            if (isChecked && !existing) {
+                console.debug('[addon] adding to summary', service, price, 'key=', addonKey);
+                const elt = document.createElement('div');
+                elt.className = 'money';
+                elt.dataset.addon = addonKey;
+                elt.innerHTML = `<p class="change">${service}</p><p class="cost">${price}</p>`;
+                elements.finish.querySelector('.plann').appendChild(elt);
+            } else if (!isChecked && existing) {
+                console.debug('[addon] removing from summary', service);
+                existing.remove();
+            }
+            
+            
+            renderSummary();
+
+            
+        });
+    });
+}
+
+function calculateTotal() {
+    const isYearly = elements.pone.classList.contains('ptwo');
+    let total = 0;
+
+    
+    if (selectedPlanIndex !== -1) {
+        const planPriceText = isYearly ? yearlyPrices[selectedPlanIndex] : monthlyPrices[selectedPlanIndex];
+        total += parsePriceToNumber(planPriceText);
+    }
+
+    
+    const addonPricesCurrent = isYearly ? addonPrices.yearly : addonPrices.monthly;
+    selectedAddons.forEach((selected, i) => {
+        if (selected) total += parsePriceToNumber(addonPricesCurrent[i]);
+    });
+
+    return `+$${total}${isYearly ? '/yr' : '/mo'}`;
+}
+
+elements.steps.forEach((step, index) => {
+    step.addEventListener('click', () => {
+        const target = index + 1;
+        
+        for (let s = 1; s <= target - 1; s++) {
+            if (!verifStep(s)) {
+                elements.stepskipped.style.display = 'flex';
+                return;
+            }
+        }
+        navigateTo(target);
+    });
+});
+
+elements.next.addEventListener('click', (e) => {
+    e.preventDefault();
+    const currentStep = elements.steps.findIndex(step => step.classList.contains('clicknumber')) + 1;
+    if (verifStep(currentStep)) {
+        navigateTo(currentStep + 1);
+    } else {
+        elements.stepskipped.style.display = 'flex';
+    }
+});
+
+elements.back.addEventListener('click', (e) => {
+    e.preventDefault();
+    const currentStep = elements.steps.findIndex(step => step.classList.contains('clicknumber')) + 1;
+    navigateTo(currentStep - 1);
+});
+
+elements.confir.addEventListener('click', (e) => {
+    e.preventDefault();
+    navigateTo(5);
+});
+
+elements.ok.addEventListener('click', () => {
+    elements.stepskipped.style.display = 'none';
+});
+
+elements.chang.addEventListener('click', (e) => {
+    e.preventDefault();
+    
+    navigateTo(2);
+});
+
+setupPlanSelection();
+setupBillingToggle();
+setupAddons();
+navigateTo(1);
+        
+        
+        function initState() {
+            
+            const selected = Array.from(elements.choix).findIndex(ch => ch.classList.contains('select'));
+            selectedPlanIndex = selected !== -1 ? selected : selectedPlanIndex;
+
+            
+            selectedAddons = addonKeys.map(key => {
+                const inp = document.querySelector(`input[name="${key}"]`);
+                return inp ? !!inp.checked : false;
+            });
+
+            console.debug('[initState] selectedPlanIndex=', selectedPlanIndex, 'selectedAddons=', selectedAddons);
+            renderSummary();
+        }
+        initState();
+
+        
+        </script>
+    </body>
+</html>
